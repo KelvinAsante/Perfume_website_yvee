@@ -81,6 +81,12 @@
     min-height: 100vh;
   }
 
+  /* Prevent horizontal scrolling on mobile devices */
+  html, body, #root {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
   }
