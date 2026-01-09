@@ -35,11 +35,25 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="magenta" size="xl">
+              <Button
+                variant="magenta"
+                size="xl"
+                onClick={() => {
+                  const el = document.getElementById("products");
+                  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+              >
                 Explore Collection
               </Button>
-              <Button variant="glass" size="xl">
-                Learn More
+              <Button
+                variant="glass"
+                size="xl"
+                onClick={() => {
+                  const el = document.getElementById("view-all");
+                  if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+                }}
+              >
+                View More
               </Button>
             </div>
           </div>

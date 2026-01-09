@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCard";
+import { Link } from "react-router-dom";
 import productBodySpray from "@/assets/product-body-spray.jpg";
 import productPerfumeOil from "@/assets/product-perfume-oil.jpg";
 import productBodyMist from "@/assets/product-body-mist.jpg";
@@ -78,12 +79,12 @@ const Products = () => {
         </div>
         
         {/* View All Button */}
-        <div className="text-center mt-12">
-          <a href="#contact" className="inline-block">
+        <div id="view-all" className="text-center mt-12">
+          <Link to="/explore" className="inline-block">
             <button className="font-body text-primary hover:text-primary/80 transition-colors underline underline-offset-4">
               View All Products →
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
