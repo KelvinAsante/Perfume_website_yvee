@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X, ShoppingBag } from "lucide-react";
+import { Menu, X, ShoppingBag, Heart } from "lucide-react";
 import { useState } from "react";
+import { useStore } from "@/hooks/use-store";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { setOpenCart, setOpenWishlist } = useStore();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-glass backdrop-blur-xl border-b border-white/10">
@@ -37,8 +39,11 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="glass" size="icon">
+            <Button variant="glass" size="icon" onClick={() => setOpenCart(true)}>
               <ShoppingBag className="h-5 w-5" />
+            </Button>
+            <Button variant="glass" size="icon" onClick={() => setOpenWishlist(true)}>
+              <Heart className="h-5 w-5" />
             </Button>
             <Button variant="gold" size="lg">
               Shop Now
