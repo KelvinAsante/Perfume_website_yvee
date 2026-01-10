@@ -35,7 +35,7 @@ const Footer = () => {
                 <Phone className="h-5 w-5" />
               </a>
               <a
-                href="https://tiktok.com/@yveenoir"
+                href="https://www.tiktok.com/@yveenoir1?_r=1&_d=egle98fl6h95b1&sec_uid=MS4wLjABAAAA6fKHPAhi1g0rckm9lTMPnqD-_RGwRHGI_yWl5HUuzebiGLC4rmbq-y7ch_yr1KHT&share_author_id=6966003456490488837&sharer_language=en&source=h5_m&u_code=dik066bebcc3b4&ug_btm=b8727,b0&sec_user_id=MS4wLjABAAAA6fKHPAhi1g0rckm9lTMPnqD-_RGwRHGI_yWl5HUuzebiGLC4rmbq-y7ch_yr1KHT&utm_source=whatsapp&social_share_type=5&utm_campaign=client_share&utm_medium=ios&tt_from=whatsapp&user_id=6966003456490488837&enable_checksum=1&share_link_id=DB0680D1-E0CB-46F3-A6C4-B8645B434EB5&share_app_id=1233"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-card border border-border/50 flex items-center justify-center hover:border-magenta hover:text-magenta transition-colors"
