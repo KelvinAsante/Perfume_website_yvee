@@ -50,13 +50,22 @@ const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-foreground"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Mobile Icons */}
+          <div className="flex items-center gap-2 md:hidden">
+            <Button variant="glass" size="icon" onClick={() => setOpenCart(true)}>
+              <ShoppingBag className="h-5 w-5" />
+            </Button>
+            <Button variant="glass" size="icon" onClick={() => setOpenWishlist(true)}>
+              <Heart className="h-5 w-5" />
+            </Button>
+            {/* Mobile Menu Button */}
+            <button
+              className="text-foreground"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </nav>
 
         {/* Mobile Menu */}
