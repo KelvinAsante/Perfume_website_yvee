@@ -49,8 +49,7 @@ const Hero = () => {
                 variant="glass"
                 size="xl"
                 onClick={() => {
-                  const el = document.getElementById("view-all");
-                  if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+                  window.location.href = "/explore";
                 }}
               >
                 View More
