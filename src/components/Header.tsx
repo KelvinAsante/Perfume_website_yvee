@@ -46,9 +46,6 @@ const Header = () => {
             <a href="#products" onClick={(e) => handleNavClick(e, "#products")} className="text-foreground/80 hover:text-primary transition-colors font-body">
               Products
             </a>
-            <Link to="/wigs" className="text-foreground/80 hover:text-primary transition-colors font-body">
-              Wigs
-            </Link>
             <a href="#about" onClick={(e) => handleNavClick(e, "#about")} className="text-foreground/80 hover:text-primary transition-colors font-body">
               About
             </a>
@@ -67,7 +64,7 @@ const Header = () => {
             </Button>
             <Button variant="gold" size="lg" onClick={(e) => {
               if (location.pathname !== "/explore") {
-                 window.location.href = "/explore";
+                window.location.href = "/explore";
               }
             }}>
               Shop Now
@@ -102,9 +99,6 @@ const Header = () => {
               <a href="#products" onClick={(e) => handleNavClick(e, "#products")} className="text-foreground/80 hover:text-primary transition-colors font-body py-2">
                 Products
               </a>
-              <Link to="/wigs" onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary transition-colors font-body py-2">
-                Wigs
-              </Link>
               <a href="#about" onClick={(e) => handleNavClick(e, "#about")} className="text-foreground/80 hover:text-primary transition-colors font-body py-2">
                 About
               </a>
@@ -113,9 +107,9 @@ const Header = () => {
               </a>
               <Button variant="gold" className="mt-2" onClick={() => {
                 if (location.pathname !== "/explore") {
-                   window.location.href = "/explore";
+                  window.location.href = "/explore";
                 } else {
-                   setIsMenuOpen(false);
+                  setIsMenuOpen(false);
                 }
               }}>
                 Shop Now
