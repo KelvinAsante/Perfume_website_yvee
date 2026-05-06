@@ -2,19 +2,20 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ShoppingBag, Heart } from "lucide-react";
 import { useState } from "react";
 import { useStore } from "@/hooks/use-store";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { setOpenCart, setOpenWishlist } = useStore();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
     e.preventDefault();
     setIsMenuOpen(false);
 
     if (location.pathname !== "/") {
-      window.location.href = `/${hash}`;
+      navigate(`/${hash}`);
     } else {
       const element = document.querySelector(hash);
       if (element) {
@@ -62,9 +63,9 @@ const Header = () => {
             <Button variant="glass" size="icon" onClick={() => setOpenWishlist(true)}>
               <Heart className="h-5 w-5" />
             </Button>
-            <Button variant="gold" size="lg" onClick={(e) => {
+            <Button variant="gold" size="lg" onClick={() => {
               if (location.pathname !== "/explore") {
-                window.location.href = "/explore";
+                navigate("/explore");
               }
             }}>
               Shop Now
@@ -107,10 +108,9 @@ const Header = () => {
               </a>
               <Button variant="gold" className="mt-2" onClick={() => {
                 if (location.pathname !== "/explore") {
-                  window.location.href = "/explore";
-                } else {
-                  setIsMenuOpen(false);
+                  navigate("/explore");
                 }
+                setIsMenuOpen(false);
               }}>
                 Shop Now
               </Button>

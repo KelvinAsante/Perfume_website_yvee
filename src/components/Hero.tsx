@@ -79,12 +79,12 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start relative z-50">
               <Link to="/explore" className="w-full sm:w-auto block">
                 <Button variant="magenta" size="xl" className="w-full">
-                  Explore Collection
+                  Explore Our Perfumes
                 </Button>
               </Link>
-              <Link to="/explore" className="w-full sm:w-auto block">
+              <Link to="/wigs" className="w-full sm:w-auto block">
                 <Button variant="glass" size="xl" className="w-full">
-                  View More
+                  Explore Our Wigs
                 </Button>
               </Link>
             </div>

@@ -10,7 +10,7 @@ import product480 from "@/assets/exploremore/480cedis.jpeg";
 import product250gh from "@/assets/exploremore/250gh.jpeg";
 import product250cedis from "@/assets/exploremore/250cedis.jpeg";
 import product250big from "@/assets/exploremore/250 big big size.jpeg";
-import product220gh from "@/assets/exploremore/220gh.jpeg";
+
 import product220 from "@/assets/exploremore/220.jpeg";
 import product220_cedis from "@/assets/exploremore/220 cedis.jpeg";
 import product210 from "@/assets/exploremore/210 cedis.jpeg";
@@ -31,7 +31,7 @@ const images = [
   product250big,
   product250gh,
   product250cedis,
-  product220gh,
+
   product220,
   product220_cedis,
   product220cedis,
@@ -58,7 +58,7 @@ const productNames = [
   "Now",
   "Brown Orchid",
   "Now Women",
-  "Suave",
+
   "Aventos",
   "Oud",
   "Oud",
