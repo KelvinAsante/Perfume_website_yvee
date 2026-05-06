@@ -7,6 +7,12 @@ import productPerfume from "@/assets/product-perfume.jpg";
 import productPocketPerfume from "@/assets/product-pocket-perfume.jpg";
 import productDiffuser from "@/assets/product-diffuser.jpg";
 
+// Wig images
+import wig700 from "@/assets/wigs-image/700.jpeg";
+import wig5 from "@/assets/wigs-image/WhatsApp Image 2026-05-05 at 11.31.53 PM.jpeg";
+import wig6 from "@/assets/wigs-image/WhatsApp Image 2026-05-05 at 11.31.59 PM.jpeg";
+import wig7 from "@/assets/wigs-image/WhatsApp Image 2026-05-05 at 11.32.11 PM.jpeg";
+
 const products = [
   {
     name: "Signature Body Spray",
@@ -46,6 +52,13 @@ const products = [
   },
 ];
 
+const featuredWigs = [
+  { name: "Bone straight", category: "Wigs", price: "GH₵ 1000", image: wig700 },
+  { name: "12 inches 100%human hair", category: "Wigs", price: "GH₵ 400", image: wig5 },
+  { name: "Bob wig 10 inches 100%human hair", category: "Wigs", price: "GH₵ 450", image: wig6 },
+  { name: "4by4 closure 16 inches 100% human hair", category: "Wigs", price: "GH₵ 800", image: wig7 },
+];
+
 const Products = () => {
   return (
     <section id="products" className="py-24 relative">
@@ -67,7 +80,7 @@ const Products = () => {
           </p>
         </div>
         
-        {/* Products Grid */}
+        {/* Perfumes Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <ProductCard
@@ -78,11 +91,45 @@ const Products = () => {
           ))}
         </div>
         
-        {/* View All Button */}
+        {/* View All Perfumes */}
         <div id="view-all" className="text-center mt-12">
           <Link to="/explore" className="inline-block">
             <button className="font-body text-primary hover:text-primary/80 transition-colors underline underline-offset-4">
-              View All Products →
+              View All Perfumes →
+            </button>
+          </Link>
+        </div>
+
+        {/* Wigs Section */}
+        <div className="text-center mt-24 mb-16 animate-fade-up">
+          <span className="text-primary font-body text-sm tracking-widest uppercase">
+            Luxury Hair
+          </span>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-4 mb-6">
+            Premium <span className="text-gradient-gold">Wigs</span>
+          </h2>
+          <p className="font-body text-muted-foreground text-lg max-w-2xl mx-auto">
+            Explore our stunning collection of 100% human hair wigs — crafted for comfort, 
+            style, and a flawless natural finish.
+          </p>
+        </div>
+
+        {/* Wigs Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {featuredWigs.map((wig, index) => (
+            <ProductCard
+              key={wig.name}
+              {...wig}
+              delay={index * 100}
+            />
+          ))}
+        </div>
+
+        {/* View All Wigs */}
+        <div className="text-center mt-12">
+          <Link to="/wigs" className="inline-block">
+            <button className="font-body text-primary hover:text-primary/80 transition-colors underline underline-offset-4">
+              View All Wigs →
             </button>
           </Link>
         </div>
@@ -92,3 +139,4 @@ const Products = () => {
 };
 
 export default Products;
+

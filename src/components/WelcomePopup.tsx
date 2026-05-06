@@ -20,9 +20,14 @@ const WelcomePopup: React.FC = () => {
     localStorage.setItem("hasVisited", "true");
   };
 
-  const handleShopNow = () => {
+  const handleExplorePerfumes = () => {
     handleClose();
     window.location.href = "/explore";
+  };
+
+  const handleExploreWigs = () => {
+    handleClose();
+    window.location.href = "/wigs";
   };
 
   if (!isOpen) return null;
@@ -53,18 +58,18 @@ const WelcomePopup: React.FC = () => {
             <Button 
               variant="magenta" 
               size="xl" 
-              onClick={handleShopNow}
+              onClick={handleExplorePerfumes}
               className="flex-1"
             >
-              Shop Now
+              Explore Our Perfumes
             </Button>
             <Button 
               variant="glass" 
               size="xl" 
-              onClick={handleClose}
+              onClick={handleExploreWigs}
               className="flex-1"
             >
-              Browse Collection
+              Explore Our Wigs
             </Button>
           </div>
         </div>

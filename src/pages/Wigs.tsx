@@ -28,17 +28,17 @@ import vid9 from "@/assets/wigs-image/WhatsApp Video 2026-05-05 at 11.32.15 PM.m
 import vid10 from "@/assets/wigs-image/WhatsApp Video 2026-05-05 at 11.32.18 PM.mp4";
 
 const wigProducts = [
-  { name: "Luxury Straight Wig", price: "GH₵ 700", image: wig700 },
-  { name: "Body Wave Wig", price: "Contact for Price", image: wig5 },
-  { name: "Deep Wave Wig", price: "Contact for Price", image: wig6 },
-  { name: "Curly Bounce Wig", price: "Contact for Price", image: wig1 },
+  { name: "Bone straight", price: "GH₵ 1000", image: wig700 },
+  { name: "12 inches 100%human hair", price: "GH₵ 400", image: wig5 },
+  { name: "Bob wig 450 cedis 10 inches 100%human hair", price: "GH₵ 450", image: wig6 },
+  { name: "Wet curls 10inches 100% human hair", price: "GH₵ 450", image: wig1 },
   { name: "Silky Straight Wig", price: "Contact for Price", image: wig2 },
-  { name: "Water Wave Wig", price: "Contact for Price", image: wig3 },
-  { name: "Kinky Curly Wig", price: "Contact for Price", image: wig4 },
-  { name: "HD Lace Frontal Wig", price: "Contact for Price", image: wig7 },
-  { name: "Closure Wig", price: "Contact for Price", image: wig8 },
-  { name: "Bone Straight Wig", price: "Contact for Price", image: wig9 },
-  { name: "Raw Hair Wig", price: "Contact for Price", image: wig10 },
+  { name: "12 inches 100%human hair", price: "GH₵ 500", image: wig3 },
+  { name: "300 cedis 100%human hair", price: "GH₵ 300", image: wig4 },
+  { name: "4by4 closure 16 inches 100% human hai", price: "GH₵ 800", image: wig7 },
+  { name: "Bob wig 4by4 closure 100% human hair 12 inches", price: "GH₵ 550", image: wig8 },
+  { name: "bouncy hair 100% human hair 14inches", price: "GH₵ 700", image: wig9 },
+  { name: "Human hair 100% Bouncy hair 16 inches", price: "GH₵ 800", image: wig10 },
 ];
 
 const videos = [vid1, vid2, vid3, vid4, vid5, vid6, vid7, vid8, vid9, vid10];
@@ -48,7 +48,7 @@ const AutoPlayVideo = ({ src }: { src: string }) => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
+      videoRef.current.play().catch(() => { });
     }
   }, []);
 
