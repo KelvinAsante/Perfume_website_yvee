@@ -11,6 +11,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Explore from "./pages/Explore";
 import Wigs from "./pages/Wigs";
+import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,15 +22,17 @@ const App = () => (
       <StoreProvider>
         <Toaster />
         <Sonner />
-        <CartSheet />
-        <WishlistSheet />
-        <WelcomePopup />
-        <FloatingWhatsApp phone="233547498244" message="Hello Yvee Noir! I'm interested in your products." />
         <BrowserRouter>
+          <CartSheet />
+          <WishlistSheet />
+          <WelcomePopup />
+          <FloatingWhatsApp phone="233547498244" message="Hello Yvee Noir! I'm interested in your products." />
+
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/wigs" element={<Wigs />} />
+            <Route path="/checkout" element={<Checkout />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

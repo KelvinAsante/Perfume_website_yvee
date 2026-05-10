@@ -3,10 +3,11 @@ import { Sheet, SheetContent, SheetTitle, SheetHeader } from "@/components/ui/sh
 import { Button } from "@/components/ui/button";
 import useStore from "@/hooks/use-store";
 import { useToast } from "@/hooks/use-toast";
-import PaymentModal from "@/components/PaymentModal";
+import { useNavigate } from "react-router-dom";
 
 const CartSheet: React.FC = () => {
   const { cart, openCart, setOpenCart, removeFromCart } = useStore();
+  const navigate = useNavigate();
 
   const total = cart.reduce((acc, i) => acc + parseFloat(String(i.price).replace(/[^0-9.]/g, "")) * (i.quantity || 1), 0);
   const { toast } = useToast();
@@ -53,13 +54,14 @@ const CartSheet: React.FC = () => {
                 });
                 return;
               }
-              setModalOpen(true);
+              setOpenCart(false);
+              navigate("/checkout");
             }}
           >
-            Checkout
+            Proceed to Checkout
           </Button>
         </div>
-        <PaymentModal open={modalOpen} onClose={() => setModalOpen(false)} items={cart} />
+        {/* Checkout is now a dedicated page at /checkout */}
       </SheetContent>
     </Sheet>
   );

@@ -28,11 +28,11 @@ import vid9 from "@/assets/wigs-image/WhatsApp Video 2026-05-05 at 11.32.15 PM.m
 import vid10 from "@/assets/wigs-image/WhatsApp Video 2026-05-05 at 11.32.18 PM.mp4";
 
 const wigProducts = [
-  { name: "Bone straight", price: "GH₵ 1000", image: wig700 },
+  { name: "100%human hair", price: "GH₵ 700", image: wig700 },
   { name: "12 inches 100%human hair", price: "GH₵ 400", image: wig5 },
   { name: "Bob wig 450 cedis 10 inches 100%human hair", price: "GH₵ 450", image: wig6 },
   { name: "Wet curls 10inches 100% human hair", price: "GH₵ 450", image: wig1 },
-  { name: "Silky Straight Wig", price: "Contact for Price", image: wig2 },
+  { name: "wet curls 100% human hair", price: "GH₵ 600", image: wig2 },
   { name: "12 inches 100%human hair", price: "GH₵ 500", image: wig3 },
   { name: "300 cedis 100%human hair", price: "GH₵ 300", image: wig4 },
   { name: "4by4 closure 16 inches 100% human hai", price: "GH₵ 800", image: wig7 },
